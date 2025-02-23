@@ -6,6 +6,7 @@ import com.hb3nce04.career.core.exception.util.ValidationError;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -40,6 +41,24 @@ public class ExceptionHandler {
     @org.springframework.web.bind.annotation.ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     public ResponseEntity<ApiError> handleNHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException ex) {
         ApiError error = new ApiError(new Date(), HttpStatus.BAD_REQUEST, "Az adott metódus nem támogatott. (%s)".formatted(ex.getMethod()));
+        return new ResponseEntity<>(error, new HttpHeaders(), error.getStatus());
+    }
+
+    @org.springframework.web.bind.annotation.ExceptionHandler(BadCredentialsException.class)
+    public ResponseEntity<ApiError> handleNHttpRequestMethodNotSupportedException() {
+        ApiError error = new ApiError(new Date(), HttpStatus.FORBIDDEN, "Hibás felhasználónév vagy jelszó!");
+        return new ResponseEntity<>(error, new HttpHeaders(), error.getStatus());
+    }
+
+    @org.springframework.web.bind.annotation.ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ApiError> handleNHttpRequestMethodNotSupportedException(IllegalArgumentException ex) {
+        ApiError error = new ApiError(new Date(), HttpStatus.BAD_REQUEST, ex.getMessage());
+        return new ResponseEntity<>(error, new HttpHeaders(), error.getStatus());
+    }
+
+    @org.springframework.web.bind.annotation.ExceptionHandler(Exception.class)
+    public ResponseEntity<ApiError> handleGeneralException() {
+        ApiError error = new ApiError(new Date(), HttpStatus.INTERNAL_SERVER_ERROR, "Ismeretlen hiba történt!");
         return new ResponseEntity<>(error, new HttpHeaders(), error.getStatus());
     }
 }

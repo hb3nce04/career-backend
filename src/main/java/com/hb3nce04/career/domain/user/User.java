@@ -16,14 +16,16 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 public class User extends BaseEntity {
-    private String name;
+    @Column(unique = true, nullable = false)
+    private String username;
 
+    @Column(nullable = false)
     private String password;
 
     @Enumerated(EnumType.STRING)
-    private Role role;
+    @Column(nullable = false)
+    private Role role = Role.USER;
 
     @OneToMany(mappedBy = "user")
     private List<Class> classes;
 }
-

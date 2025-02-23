@@ -2,6 +2,7 @@ package com.hb3nce04.career.domain.category;
 
 import com.hb3nce04.career.core.BaseEntity;
 import com.hb3nce04.career.domain.field.Field;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
@@ -17,6 +18,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 public class Category extends BaseEntity {
+    @Column(nullable = false)
     private String name;
 
     @OneToMany(mappedBy = "category")

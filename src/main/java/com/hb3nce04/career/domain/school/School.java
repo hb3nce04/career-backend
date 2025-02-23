@@ -2,6 +2,7 @@ package com.hb3nce04.career.domain.school;
 
 import com.hb3nce04.career.core.BaseEntity;
 import com.hb3nce04.career.domain._class.Class;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
@@ -17,6 +18,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 public class School extends BaseEntity {
+    @Column(nullable = false)
     private String name;
 
     @OneToMany(mappedBy = "school")
