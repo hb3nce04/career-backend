@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("fields")
-public class FieldController extends CrudControllerImpl<FieldDto, Field, FieldMapper, Integer>{
-    public FieldController(CrudService<Field, Integer> service, FieldMapper mapper) {
-        super(service, mapper);
+public class FieldController extends CrudControllerImpl<FieldDto, Integer>{
+    public FieldController(CrudService<FieldDto, Integer> service) {
+        super(service);
     }
 }

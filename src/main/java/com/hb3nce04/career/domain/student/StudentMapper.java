@@ -8,14 +8,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @AllArgsConstructor
 public class StudentMapper implements Mapper<StudentDto, Student> {
-
     private ModelMapper modelMapper;
 
-    public Student toEntity(StudentDto dto) {
-        return modelMapper.map(dto, Student.class);
-    }
+    public Student toEntity(StudentDto dto) { return modelMapper.map(dto, Student.class); }
 
-    public StudentDto toDTO(Student entity) {
-        return modelMapper.map(entity, StudentDto.class);
-    }
+    public StudentDto toDTO(Student entity) { return modelMapper.map(entity, StudentDto.class); }
+
+    public Student updateEntity(Student entity, StudentDto dto) { return modelMapper.map(dto, Student.class); }
 }

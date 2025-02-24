@@ -14,7 +14,7 @@ public class ClassMapper implements Mapper<ClassDto, Class> {
         return modelMapper.map(dto, Class.class);
     }
 
-    public ClassDto toDTO(Class entity) {
-        return modelMapper.map(entity, ClassDto.class);
-    }
+    public ClassDto toDTO(Class entity) { return modelMapper.map(entity, ClassDto.class); }
+
+    public Class updateEntity(Class entity, ClassDto dto) { return modelMapper.map(dto, Class.class); }
 }

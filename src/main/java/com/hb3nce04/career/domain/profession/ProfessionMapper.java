@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @AllArgsConstructor
 public class ProfessionMapper implements Mapper<ProfessionDto, Profession> {
-
     private ModelMapper modelMapper;
 
     public Profession toEntity(ProfessionDto dto) {
@@ -18,4 +17,6 @@ public class ProfessionMapper implements Mapper<ProfessionDto, Profession> {
     public ProfessionDto toDTO(Profession entity) {
         return modelMapper.map(entity, ProfessionDto.class);
     }
+
+    public Profession updateEntity(Profession entity, ProfessionDto dto) { return modelMapper.map(dto, Profession.class); }
 }

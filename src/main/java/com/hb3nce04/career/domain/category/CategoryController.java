@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("categories")
-public class CategoryController extends CrudControllerImpl<CategoryDto, Category, CategoryMapper, Integer> {
-    public CategoryController(CrudService<Category, Integer> service, CategoryMapper mapper) {
-        super(service, mapper);
+public class CategoryController extends CrudControllerImpl<CategoryDto, Integer> {
+    public CategoryController(CrudService<CategoryDto, Integer> service) {
+        super(service);
     }
 }

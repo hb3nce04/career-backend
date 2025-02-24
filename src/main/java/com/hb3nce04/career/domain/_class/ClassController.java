@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("classes")
-public class ClassController extends CrudControllerImpl<ClassDto, Class, ClassMapper, Integer> {
-    public ClassController(CrudService<Class, Integer> service, ClassMapper mapper) {
-        super(service, mapper);
+public class ClassController extends CrudControllerImpl<ClassDto, Integer> {
+    public ClassController(CrudService<ClassDto, Integer> service) {
+        super(service);
     }
 }

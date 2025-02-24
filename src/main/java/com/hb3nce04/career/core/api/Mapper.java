@@ -8,4 +8,5 @@ package com.hb3nce04.career.core.api;
 public interface Mapper<D, E> {
     E toEntity(D dto);
     D toDTO(E entity);
+    E updateEntity(E entity, D dto);
 }

@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @AllArgsConstructor
 public class FieldMapper implements Mapper<FieldDto, Field> {
-
     private ModelMapper modelMapper;
 
     public Field toEntity(FieldDto dto) {
@@ -18,4 +17,6 @@ public class FieldMapper implements Mapper<FieldDto, Field> {
     public FieldDto toDTO(Field entity) {
         return modelMapper.map(entity, FieldDto.class);
     }
+
+    public Field updateEntity(Field entity, FieldDto dto) { return modelMapper.map(dto, Field.class); }
 }

@@ -8,14 +8,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @AllArgsConstructor
 public class SectorMapper implements Mapper<SectorDto, Sector> {
-
     private ModelMapper modelMapper;
 
-    public Sector toEntity(SectorDto dto) {
-        return modelMapper.map(dto, Sector.class);
-    }
+    public Sector toEntity(SectorDto dto) { return modelMapper.map(dto, Sector.class); }
 
-    public SectorDto toDTO(Sector entity) {
-        return modelMapper.map(entity, SectorDto.class);
-    }
+    public SectorDto toDTO(Sector entity) { return modelMapper.map(entity, SectorDto.class); }
+
+    public Sector updateEntity(Sector entity, SectorDto dto) { return modelMapper.map(dto, Sector.class); }
 }

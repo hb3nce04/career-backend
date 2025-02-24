@@ -19,4 +19,6 @@ public class SchoolMapper implements Mapper<SchoolDto, School> {
     public SchoolDto toDTO(School entity) {
         return modelMapper.map(entity, SchoolDto.class);
     }
+
+    public School updateEntity(School entity, SchoolDto dto) { return modelMapper.map(dto, School.class); }
 }

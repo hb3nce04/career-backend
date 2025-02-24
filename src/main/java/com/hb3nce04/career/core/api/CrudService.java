@@ -4,13 +4,13 @@ import java.util.List;
 
 /**
  * Interface for CRUD service.
- * @param <E> resource's entity class
+ * @param <D> resource's DTO class
  * @param <ID> resource's JPA primary key type
  */
-public interface CrudService <E, ID> {
-    List<E> findAll();
-    E findById(ID id);
-    E create(E entity);
-    E update(ID id, E entity);
+public interface CrudService <D, ID> {
+    List<D> findAll();
+    D findById(ID id);
+    D create(D entity);
+    D update(ID id, D entity);
     void delete(ID id);
 }

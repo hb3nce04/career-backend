@@ -17,4 +17,6 @@ public class CategoryMapper implements Mapper<CategoryDto, Category> {
     public CategoryDto toDTO(Category entity) {
         return modelMapper.map(entity, CategoryDto.class);
     }
+
+    public Category updateEntity(Category entity, CategoryDto dto) { return modelMapper.map(dto, Category.class); }
 }

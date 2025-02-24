@@ -51,7 +51,7 @@ public class ExceptionHandler {
     }
 
     @org.springframework.web.bind.annotation.ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<ApiError> handleNHttpRequestMethodNotSupportedException(IllegalArgumentException ex) {
+    public ResponseEntity<ApiError> handleHttpRequestMethodNotSupportedException(IllegalArgumentException ex) {
         ApiError error = new ApiError(new Date(), HttpStatus.BAD_REQUEST, ex.getMessage());
         return new ResponseEntity<>(error, new HttpHeaders(), error.getStatus());
     }
