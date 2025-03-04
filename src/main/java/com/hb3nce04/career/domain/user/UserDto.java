@@ -44,11 +44,4 @@ public class UserDto implements UserDetails {
     public boolean isEnabled() {
         return UserDetails.super.isEnabled();
     }
-
-
-    // TODO: validate ENUMs
-    //private Role role;
-
-//    @OneToMany(mappedBy = "user")
-//    private List<Class> classes;
 }

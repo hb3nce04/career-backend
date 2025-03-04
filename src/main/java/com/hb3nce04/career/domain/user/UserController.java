@@ -1,6 +1,7 @@
 package com.hb3nce04.career.domain.user;
 
 import jakarta.validation.Valid;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,10 +18,10 @@ public class UserController {
     private UserService userService;
 
     @Autowired
-    private UserMapper userMapper;
+    private ModelMapper mapper;
 
     @PostMapping("register")
     public ResponseEntity<UserDto> register(@RequestBody @Valid UserDto userDto) {
-        return new ResponseEntity<>(userMapper.toDTO(userService.create(userMapper.toEntity(userDto))), HttpStatus.CREATED);
+        return new ResponseEntity<>(mapper.map(userService.create(mapper.map(userDto, User.class)), UserDto.class), HttpStatus.CREATED);
     }
 }
