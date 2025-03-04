@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("professions")
-public class ProfessionController extends CrudControllerImpl<ProfessionDto, Integer> {
-    public ProfessionController(CrudService<ProfessionDto, Integer> service) {
+public class ProfessionController extends CrudControllerImpl<ProfessionDto, Profession, Integer> {
+    public ProfessionController(CrudService<ProfessionDto, Profession, Integer> service) {
         super(service);
     }
 }

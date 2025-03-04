@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CategoryDto extends BaseDto {
+public class CategoryDto extends BaseDto<Integer> {
     @NotBlank(message = "A kategória nevének megadása kötelező.")
     private String name;
 }

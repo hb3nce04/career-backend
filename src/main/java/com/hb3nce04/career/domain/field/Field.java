@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Field extends BaseEntity {
+public class Field extends BaseEntity<Integer> {
     @Column(nullable = false)
     private String description;
 

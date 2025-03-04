@@ -1,5 +1,6 @@
 package com.hb3nce04.career.domain.user;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -18,13 +19,13 @@ public class UserService implements UserDetailsService {
     private UserRepository repository;
 
     @Autowired
-    private UserMapper mapper;
+    private ModelMapper mapper;
 
     @Override
     public UserDto loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<User> user = repository.findByUsername(username);
         if (user.isPresent()) {
-            return mapper.toDTO(user.get());
+            return mapper.map(user.get(), UserDto.class);
         }
         throw new UsernameNotFoundException(username);
     }

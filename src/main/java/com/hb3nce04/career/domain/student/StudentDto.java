@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudentDto extends BaseDto {
+public class StudentDto extends BaseDto<Integer> {
     @NotBlank(message = "A tanuló keresztnevének megadása kötelező.")
     private String firstName;
 

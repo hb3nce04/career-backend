@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProfessionDto extends BaseDto {
+public class ProfessionDto extends BaseDto<Integer> {
     @NotBlank(message = "A szakma nevének megadása kötelező.")
     private String name;
 

@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class FieldDto extends BaseDto {
+public class FieldDto extends BaseDto<Integer> {
     @NotBlank(message = "A terület leírásának megadása kötelező.")
     private String description;
 

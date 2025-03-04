@@ -13,7 +13,7 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @Entity
 @SuperBuilder
-public class TestEntity extends BaseEntity {
+public class TestEntity extends BaseEntity<Integer> {
     @NotBlank
     private String name;
     @NotBlank

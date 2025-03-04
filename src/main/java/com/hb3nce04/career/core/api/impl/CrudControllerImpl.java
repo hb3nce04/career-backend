@@ -1,5 +1,7 @@
 package com.hb3nce04.career.core.api.impl;
 
+import com.hb3nce04.career.core.BaseDto;
+import com.hb3nce04.career.core.BaseEntity;
 import com.hb3nce04.career.core.api.CrudController;
 import com.hb3nce04.career.core.api.CrudService;
 import jakarta.validation.Valid;
@@ -12,12 +14,13 @@ import java.util.List;
 /**
  * Abstract controller class for resources to implement CRUD operations.
  * @param <D> resource's DTO class
+ * @param <E> resource's entity class
  * @param <ID> resource's JPA primary key type
  */
-public abstract class CrudControllerImpl<D, ID> implements CrudController<D, ID> {
-    private final CrudService<D, ID> service;
+public abstract class CrudControllerImpl<D extends BaseDto<ID>, E extends BaseEntity<ID>, ID> implements CrudController<D, ID> {
+    private final CrudService<D, E, ID> service;
 
-    public CrudControllerImpl(CrudService<D, ID> service) {
+    public CrudControllerImpl(CrudService<D, E, ID> service) {
         this.service = service;
     }
 

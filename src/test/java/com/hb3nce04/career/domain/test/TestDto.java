@@ -10,7 +10,7 @@ import lombok.experimental.SuperBuilder;
 @Data
 @NoArgsConstructor
 @SuperBuilder
-public class TestDto extends BaseDto {
+public class TestDto extends BaseDto<Integer> {
     private String name;
     private Integer number;
 }

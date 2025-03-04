@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Student extends BaseEntity {
+public class Student extends BaseEntity<Integer> {
     @Column(nullable = false)
     private String firstName;
 

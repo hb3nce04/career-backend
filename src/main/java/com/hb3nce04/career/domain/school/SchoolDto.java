@@ -8,7 +8,7 @@ import lombok.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SchoolDto extends BaseDto {
+public class SchoolDto extends BaseDto<Integer> {
     @NotBlank(message = "Az iskola nevének megadása kötelező.")
     private String name;
 }

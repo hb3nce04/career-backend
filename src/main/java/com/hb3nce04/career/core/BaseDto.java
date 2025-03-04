@@ -1,5 +1,6 @@
 package com.hb3nce04.career.core;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,6 +13,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
-public class BaseDto {
-    private Integer id;
+public class BaseDto<T> {
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    private T id;
 }

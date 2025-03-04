@@ -17,7 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Profession extends BaseEntity {
+public class Profession extends BaseEntity<Integer> {
     @Column(nullable = false)
     private String name;
 

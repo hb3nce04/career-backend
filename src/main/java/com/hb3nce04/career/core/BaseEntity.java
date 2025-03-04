@@ -1,9 +1,12 @@
 package com.hb3nce04.career.core;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 /**
@@ -14,8 +17,9 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @SuperBuilder
 @MappedSuperclass
-public class BaseEntity {
+public class BaseEntity<T> {
     @Id
     @GeneratedValue
-    private Integer id;
+    @Column(insertable = false, updatable = false)
+    private T id;
 }

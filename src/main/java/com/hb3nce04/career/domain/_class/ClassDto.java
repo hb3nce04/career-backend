@@ -12,7 +12,7 @@ import org.hibernate.validator.constraints.Range;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class ClassDto extends BaseDto {
+public class ClassDto extends BaseDto<Integer> {
     @NotBlank(message = "Az osztály nevének megadása kötelező.")
     private String name;
 
