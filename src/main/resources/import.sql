@@ -1,0 +1,144 @@
+-- User
+INSERT INTO app_user (education_id, password, is_admin) VALUES (11111111111, '$2a$12$cLQBwFxorrtr16PWatQBo.NROOZKJ1vDiD9Hk0ex58tPxGwaFo51q', true);
+INSERT INTO app_user (education_id, password, is_admin) VALUES (22222222222, '$2a$12$qdySoYVuqA8S4u8dpLjY0evcrLTpN6QfaVZcfEm4V0zvAfOYqqa5m', false);
+
+-- School
+INSERT INTO school (name) VALUES ('Nyíregyházi SZC Bánki Donát Műszaki Technikum és Kollégium');
+INSERT INTO school (name) VALUES ('Nyíregyházi SZC Bencs László Szakképző Iskola');
+INSERT INTO school (name) VALUES ('Nyíregyházi SZC Inczédy György Szakképző Iskola és Kollégium');
+INSERT INTO school (name) VALUES ('Nyíregyházi SZC Sipkay Barna Technikum');
+INSERT INTO school (name) VALUES ('Nyíregyházi SZC Széchenyi István Technikum és Kollégium');
+INSERT INTO school (name) VALUES ('Nyíregyházi SZC Teleki Blanka Szakképző Iskola és Kollégium');
+INSERT INTO school (name) VALUES ('Nyíregyházi SZC Tiszavasvári Szakképző Iskola és Kollégium');
+INSERT INTO school (name) VALUES ('Nyíregyházi SZC Vásárhelyi Pál Technikum');
+INSERT INTO school (name) VALUES ('Nyíregyházi SZC Wesselényi Miklós Technikum és Kollégium');
+INSERT INTO school (name) VALUES ('Nyíregyházi SZC Zay Anna Technikum és Kollégium');
+
+-- Sector
+INSERT INTO sector (name, number) VALUES ('Vegyipar', 'XXV');
+INSERT INTO sector (name, number) VALUES ('Agrár gépész', 'XXXI');
+INSERT INTO sector (name, number) VALUES ('Bányászat', 'VII');
+INSERT INTO sector (name, number) VALUES ('Egészségügy', 'I');
+INSERT INTO sector (name, number) VALUES ('Élelmiszeripar', 'XXXVI');
+INSERT INTO sector (name, number) VALUES ('Építőipar', 'XVI');
+INSERT INTO sector (name, number) VALUES ('Épületgépészet', 'VIII');
+INSERT INTO sector (name, number) VALUES ('Erdészet és vadgazdálkodás', 'XXXII');
+INSERT INTO sector (name, number) VALUES ('Faipar', 'XVIII');
+INSERT INTO sector (name, number) VALUES ('Földmérés', 'XXXV');
+INSERT INTO sector (name, number) VALUES ('Gépészet', 'IX');
+INSERT INTO sector (name, number) VALUES ('Honvédelem', 'XLIII');
+INSERT INTO sector (name, number) VALUES ('Informatika', 'XIII');
+INSERT INTO sector (name, number) VALUES ('Kereskedelem', 'XXVI');
+INSERT INTO sector (name, number) VALUES ('Kertészet és parképítés', 'XXXIV');
+INSERT INTO sector (name, number) VALUES ('Kohászat', 'X');
+INSERT INTO sector (name, number) VALUES ('Könnyűipar', 'XVII');
+INSERT INTO sector (name, number) VALUES ('Környezetvédelem', 'XXIII');
+INSERT INTO sector (name, number) VALUES ('Közgazdaság', 'XXIV');
+INSERT INTO sector (name, number) VALUES ('Közlekedés, szállítmányozás és logisztika', 'XL');
+INSERT INTO sector (name, number) VALUES ('Közlekedésgépész', 'XXII');
+INSERT INTO sector (name, number) VALUES ('Közművelődés', 'XXXIX');
+INSERT INTO sector (name, number) VALUES ('Mezőgazdaság', 'XXXIII');
+INSERT INTO sector (name, number) VALUES ('Nyomdaipar', 'XIX');
+INSERT INTO sector (name, number) VALUES ('Optika', 'XXIX');
+INSERT INTO sector (name, number) VALUES ('Pedagógia', 'IV');
+INSERT INTO sector (name, number) VALUES ('Rendészet és közszolgálat', 'XXXVIII');
+INSERT INTO sector (name, number) VALUES ('Sport', 'XXXVII');
+INSERT INTO sector (name, number) VALUES ('Szépészet', 'XXX');
+INSERT INTO sector (name, number) VALUES ('Szociális', 'III');
+INSERT INTO sector (name, number) VALUES ('Távközlés', 'XII');
+INSERT INTO sector (name, number) VALUES ('Turisztika', 'XXVIII');
+INSERT INTO sector (name, number) VALUES ('Ügyvitel', 'XXV');
+INSERT INTO sector (name, number) VALUES ('Vegyész', 'XV');
+INSERT INTO sector (name, number) VALUES ('Vendéglátóipar', 'XXVII');
+INSERT INTO sector (name, number) VALUES ('Villamosipar és elektronika', 'XI');
+INSERT INTO sector (name, number) VALUES ('Vízügy', 'XLI');
+INSERT INTO sector (name, number) VALUES ('Egészségügyi technika', 'III');
+INSERT INTO sector (name, number) VALUES ('Elektronika és elektrotechnika', 'IV');
+INSERT INTO sector (name, number) VALUES ('Építőipar', 'VI');
+INSERT INTO sector (name, number) VALUES ('Fa- és bútoripar', 'VIII');
+INSERT INTO sector (name, number) VALUES ('Gazdálkodás és menedzsment', 'IX');
+INSERT INTO sector (name, number) VALUES ('Informatika és távközlés', 'XII');
+INSERT INTO sector (name, number) VALUES ('Környezetvédelem és vízügy', 'XIV');
+INSERT INTO sector (name, number) VALUES ('Közlekedés és szállítmányozás', 'XV');
+INSERT INTO sector (name, number) VALUES ('Kreatív', 'XVI');
+INSERT INTO sector (name, number) VALUES ('Mezőgazdaság és erdészet', 'XVII');
+INSERT INTO sector (name, number) VALUES ('Oktatás', 'XVIII');
+INSERT INTO sector (name, number) VALUES ('Specializált gép- és járműgyártás', 'XX');
+INSERT INTO sector (name, number) VALUES ('Turizmus-vendéglátás', 'XXIV');
+
+-- Profession
+INSERT INTO profession (name, number) VALUES ('Ács', '3458201');
+INSERT INTO profession (name, number) VALUES ('Asztalos', '3454302');
+INSERT INTO profession (name, number) VALUES ('Autóelektronikai műszerész', '5452501');
+INSERT INTO profession (name, number) VALUES ('Autószerelő', '5452502');
+INSERT INTO profession (name, number) VALUES ('Burkoló', '3458213');
+INSERT INTO profession (name, number) VALUES ('Cukrász', '3481101');
+INSERT INTO profession (name, number) VALUES ('Divat- és stílustervező', '5421102');
+INSERT INTO profession (name, number) VALUES ('Eladó', '3434101');
+INSERT INTO profession (name, number) VALUES ('Elektronikai technikus', '5452302');
+INSERT INTO profession (name, number) VALUES ('Épület- és szerkezetlakatos', '3458203');
+INSERT INTO profession (name, number) VALUES ('Faipari technikus', '5454301');
+INSERT INTO profession (name, number) VALUES ('Festő, mázoló, tapétázó', '3458204');
+INSERT INTO profession (name, number) VALUES ('Fodrász', '5481501');
+INSERT INTO profession (name, number) VALUES ('Gépgyártástechnológiai technikus', '5452103');
+INSERT INTO profession (name, number) VALUES ('Gépi forgácsoló', '3452103');
+INSERT INTO profession (name, number) VALUES ('Gyakorló ápoló', '5472302');
+INSERT INTO profession (name, number) VALUES ('Hegesztő', '3452106');
+INSERT INTO profession (name, number) VALUES ('Informatikai rendszerüzemeltető', '5448106');
+INSERT INTO profession (name, number) VALUES ('Ipari gépész', '3452104');
+INSERT INTO profession (name, number) VALUES ('Ipari gumitermék előállító', '3454304');
+INSERT INTO profession (name, number) VALUES ('Irodai titkár', '5434603');
+INSERT INTO profession (name, number) VALUES ('Járműfényező', '3452503');
+INSERT INTO profession (name, number) VALUES ('Karosszérialakatos', '3452506');
+INSERT INTO profession (name, number) VALUES ('Kereskedő', '5434101');
+INSERT INTO profession (name, number) VALUES ('Kisgyermekgondozó, -nevelő', '5476102');
+INSERT INTO profession (name, number) VALUES ('Kozmetikus', '5481502');
+INSERT INTO profession (name, number) VALUES ('Kőműves', '3458214');
+INSERT INTO profession (name, number) VALUES ('Környezetvédelmi technikus', '5485001');
+INSERT INTO profession (name, number) VALUES ('Központifűtés- és gázhálózat rendszerszerelő', '3458209');
+INSERT INTO profession (name, number) VALUES ('Logisztikai és szállítmányozási ügyintéző', '5484111');
+INSERT INTO profession (name, number) VALUES ('Magasépítő technikus', '5458203');
+INSERT INTO profession (name, number) VALUES ('Mechatronikai technikus', '5452304');
+INSERT INTO profession (name, number) VALUES ('Mélyépítő technikus', '5458204');
+INSERT INTO profession (name, number) VALUES ('Műszaki informatikus', '5448105');
+INSERT INTO profession (name, number) VALUES ('Női szabó', '3454206');
+INSERT INTO profession (name, number) VALUES ('Pénzügyi-számviteli ügyintéző', '5434401');
+INSERT INTO profession (name, number) VALUES ('Pincér', '3481103');
+INSERT INTO profession (name, number) VALUES ('Sportedző', '5481302');
+INSERT INTO profession (name, number) VALUES ('Szakács', '3481104');
+INSERT INTO profession (name, number) VALUES ('Számítógép-szerelő, karbantartó', '3452302');
+INSERT INTO profession (name, number) VALUES ('Szociális gondozó és ápoló', '3476201');
+INSERT INTO profession (name, number) VALUES ('Turisztikai szervező, értékesítő', '5481203');
+INSERT INTO profession (name, number) VALUES ('Vendéglátásszervező', '5481101');
+INSERT INTO profession (name, number) VALUES ('Villanyszerelő', '3452204');
+INSERT INTO profession (name, number) VALUES ('Víz-, csatorna- és közmű- rendszerszerelő', '3458212');
+INSERT INTO profession (name, number) VALUES ('Vízgazdálkodó technikus', '5485302');
+
+-- StudentClass
+INSERT INTO student_class (school_id, name, finishing_year) VALUES (3, '12.A', 2018);
+INSERT INTO student_class (school_id, name, finishing_year) VALUES (3, '12.D', 2022);
+
+-- Student
+INSERT INTO student (first_name, last_name, is_day_shift, student_class_id, profession_id) VALUES ('József', 'Kovács', true, 1, 12);
+INSERT INTO student (first_name, last_name, is_day_shift, student_class_id, profession_id) VALUES ('Gizella', 'Soós', false, 1, 13);
+INSERT INTO student (first_name, last_name, is_day_shift, student_class_id, profession_id) VALUES ('Donát', 'Lukács', true, 1, 20);
+
+-- CareerPathCategory
+INSERT INTO career_path_category (name) VALUES ('Egészségügyi / családi okok miatt nem dolgozik');
+INSERT INTO career_path_category (name) VALUES ('Egyéb okból nem dolgozik');
+INSERT INTO career_path_category (name) VALUES ('Érettségire készül az intézményben / tagintézményben');
+INSERT INTO career_path_category (name) VALUES ('Más középfokú intézményben / tagintézményben érettségire készül');
+INSERT INTO career_path_category (name) VALUES ('Más középfokú intézményben / tagintézményben szakmát tanul');
+INSERT INTO career_path_category (name) VALUES ('Nem a szakmájában dolgozik külföldön');
+INSERT INTO career_path_category (name) VALUES ('Nem szakirányú felsőoktatásban tanul');
+INSERT INTO career_path_category (name) VALUES ('Nem szakmájában dolgozik');
+INSERT INTO career_path_category (name) VALUES ('Nincs információ');
+INSERT INTO career_path_category (name) VALUES ('Szakirányú felsőoktatásban tanul');
+INSERT INTO career_path_category (name) VALUES ('Szakmájában dolgozik');
+INSERT INTO career_path_category (name) VALUES ('Szakmájában dolgozik külföldön');
+INSERT INTO career_path_category (name) VALUES ('Szakmát tanul az intézményben / tagintézményben');
+
+-- CareerPath
+INSERT INTO career_path (student_id, career_path_category_id, description) VALUES (1, 5, 'Ide jön például, hogy melyik intézményben tanul.');
+INSERT INTO career_path (student_id, career_path_category_id, description) VALUES (2, 3, 'lorem ipsum');
+INSERT INTO career_path (student_id, career_path_category_id, description) VALUES (3, 13, 'nincs adat');
