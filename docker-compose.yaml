@@ -1,0 +1,10 @@
+name: career-app-backend
+services:
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_DB: career
+      POSTGRES_PASSWORD: postgres
