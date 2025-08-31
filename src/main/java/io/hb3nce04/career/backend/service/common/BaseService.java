@@ -8,9 +8,9 @@ import io.hb3nce04.career.backend.repository.common.BaseRepository;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-abstract public class BaseService<D, E extends BaseEntity, R extends BaseRepository<E>> {
+abstract public class BaseService<D, E extends BaseEntity, M extends BaseMapper<D, E>, R extends BaseRepository<E>> {
+    protected final M mapper;
     protected final R repository;
-    protected final BaseMapper<D, E> mapper;
 
     public List<D> findAll() {
         return this.mapper.toDtoList(repository.findAll());

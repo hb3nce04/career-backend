@@ -1,7 +1,3 @@
--- User
-INSERT INTO app_user (education_id, password, is_admin) VALUES (11111111111, '$2a$12$cLQBwFxorrtr16PWatQBo.NROOZKJ1vDiD9Hk0ex58tPxGwaFo51q', true);
-INSERT INTO app_user (education_id, password, is_admin) VALUES (22222222222, '$2a$12$qdySoYVuqA8S4u8dpLjY0evcrLTpN6QfaVZcfEm4V0zvAfOYqqa5m', false);
-
 -- School
 INSERT INTO school (name) VALUES ('Nyíregyházi SZC Bánki Donát Műszaki Technikum és Kollégium');
 INSERT INTO school (name) VALUES ('Nyíregyházi SZC Bencs László Szakképző Iskola');
