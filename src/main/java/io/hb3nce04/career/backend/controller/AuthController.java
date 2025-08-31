@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.hb3nce04.career.backend.model.dto.request.AuthRequestDto;
 import io.hb3nce04.career.backend.model.dto.response.MessageResponseDto;
-import io.hb3nce04.career.backend.service.AuthService;
+import io.hb3nce04.career.backend.service.auth.AuthService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

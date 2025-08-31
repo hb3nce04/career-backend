@@ -1,4 +1,4 @@
-package io.hb3nce04.career.backend.service;
+package io.hb3nce04.career.backend.service.auth;
 
 import java.nio.charset.StandardCharsets;
 import java.security.Key;

@@ -1,4 +1,4 @@
-package io.hb3nce04.career.backend.service;
+package io.hb3nce04.career.backend.service.auth;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

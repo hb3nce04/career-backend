@@ -13,7 +13,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import io.hb3nce04.career.backend.filter.JwtFilter;
-import io.hb3nce04.career.backend.service.TokenProviderService;
+import io.hb3nce04.career.backend.service.auth.TokenProviderService;
 import lombok.RequiredArgsConstructor;
 
 @Configuration
