@@ -14,10 +14,10 @@ import lombok.Setter;
 @Setter
 @Entity
 public class Sector extends BaseEntity {
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private String name;
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private String number;
 
     @OneToMany(mappedBy = "sector", cascade = CascadeType.ALL, orphanRemoval = true)
