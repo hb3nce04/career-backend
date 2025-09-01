@@ -36,4 +36,14 @@ public class AuthController {
 
         return ResponseEntity.ok(MessageResponseDto.builder().message("Sikeresen bejelentkeztél!").build());
     }
+
+    @PostMapping("/logout")
+    public ResponseEntity<MessageResponseDto> logout(HttpServletResponse response) {
+        Cookie cookie = new Cookie("token", null);
+        cookie.setMaxAge(0);
+        cookie.setPath("/api");
+        response.addCookie(cookie);
+
+        return ResponseEntity.ok(MessageResponseDto.builder().message("Sikeresen kijelentkeztél!").build());
+    }
 }
