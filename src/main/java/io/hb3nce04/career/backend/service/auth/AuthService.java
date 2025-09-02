@@ -6,6 +6,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
 
+import io.hb3nce04.career.backend.model.dto.UserDto;
 import io.hb3nce04.career.backend.model.dto.request.AuthRequestDto;
 import lombok.RequiredArgsConstructor;
 
@@ -24,5 +25,15 @@ public class AuthService {
         } catch (AuthenticationException e) {
             throw new RuntimeException("Invalid username or password");
         }
+    }
+
+    public UserDto getProfile(Authentication authentication) {
+        return UserDto.builder().educationId(authentication.getName())
+                .isAdmin(
+                        authentication.getAuthorities()
+                                .stream()
+                                .anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"))
+                )
+                .build();
     }
 }

@@ -1,12 +1,15 @@
 package io.hb3nce04.career.backend.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.hb3nce04.career.backend.model.dto.UserDto;
 import io.hb3nce04.career.backend.model.dto.request.AuthRequestDto;
 import io.hb3nce04.career.backend.model.dto.response.MessageResponseDto;
 import io.hb3nce04.career.backend.service.auth.AuthService;
@@ -45,5 +48,10 @@ public class AuthController {
         response.addCookie(cookie);
 
         return ResponseEntity.ok(MessageResponseDto.builder().message("Sikeresen kijelentkeztél!").build());
+    }
+
+    @GetMapping("/profile")
+    public ResponseEntity<UserDto> profile(Authentication authentication) {
+        return ResponseEntity.ok(authService.getProfile(authentication));
     }
 }
