@@ -1,24 +1,20 @@
 package io.hb3nce04.career.backend.controller;
 
-import java.util.List;
-
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.hb3nce04.career.backend.controller.common.BaseController;
+import io.hb3nce04.career.backend.mapper.CareerPathCategoryMapper;
+import io.hb3nce04.career.backend.model.dto.CareerPathCategoryDto;
 import io.hb3nce04.career.backend.model.entity.CareerPathCategory;
+import io.hb3nce04.career.backend.repository.CareerPathCategoryRepository;
 import io.hb3nce04.career.backend.service.CareerPathCategoryService;
-import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/categories")
-@RequiredArgsConstructor
-public class CareerPathCategoryController {
-    private final CareerPathCategoryService careerPathCategoryService;
-
-    @GetMapping
-    public ResponseEntity<List<CareerPathCategory>> findAll() {
-        return ResponseEntity.ok(careerPathCategoryService.findAll());
+public class CareerPathCategoryController extends
+        BaseController<CareerPathCategoryService, CareerPathCategoryDto, CareerPathCategory, CareerPathCategoryMapper, CareerPathCategoryRepository> {
+    public CareerPathCategoryController(CareerPathCategoryService service) {
+        super(service);
     }
 }

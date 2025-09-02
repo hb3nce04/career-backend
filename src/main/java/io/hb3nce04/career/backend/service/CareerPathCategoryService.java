@@ -1,19 +1,19 @@
 package io.hb3nce04.career.backend.service;
 
-import java.util.List;
-
 import org.springframework.stereotype.Service;
 
+import io.hb3nce04.career.backend.mapper.CareerPathCategoryMapper;
+import io.hb3nce04.career.backend.model.dto.CareerPathCategoryDto;
 import io.hb3nce04.career.backend.model.entity.CareerPathCategory;
 import io.hb3nce04.career.backend.repository.CareerPathCategoryRepository;
-import lombok.RequiredArgsConstructor;
+import io.hb3nce04.career.backend.service.common.BaseService;
 
 @Service
-@RequiredArgsConstructor
-public class CareerPathCategoryService {
-    private final CareerPathCategoryRepository careerPathCategoryRepository;
-
-    public List<CareerPathCategory> findAll() {
-        return careerPathCategoryRepository.findAll();
+public class CareerPathCategoryService
+        extends BaseService<CareerPathCategoryDto, CareerPathCategory, CareerPathCategoryMapper, CareerPathCategoryRepository> {
+    public CareerPathCategoryService(
+            CareerPathCategoryMapper mapper,
+            CareerPathCategoryRepository repository) {
+        super(mapper, repository);
     }
 }
