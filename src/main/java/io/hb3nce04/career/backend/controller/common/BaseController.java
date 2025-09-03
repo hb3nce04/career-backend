@@ -4,11 +4,14 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import io.hb3nce04.career.backend.mapper.common.BaseMapper;
 import io.hb3nce04.career.backend.model.entity.common.BaseEntity;
 import io.hb3nce04.career.backend.repository.common.BaseRepository;
 import io.hb3nce04.career.backend.service.common.BaseService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,5 +23,10 @@ abstract public class BaseController<S extends BaseService<D, E, M, R>, D, E ext
     @GetMapping
     public ResponseEntity<List<D>> findAll() {
         return ResponseEntity.ok(service.findAll());
+    }
+
+    @PostMapping
+    public ResponseEntity<D> create(@RequestBody @Valid D dto) {
+        return ResponseEntity.ok(service.create(dto));
     }
 }
