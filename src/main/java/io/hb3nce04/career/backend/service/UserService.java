@@ -8,10 +8,10 @@ import io.hb3nce04.career.backend.model.dto.UserDto;
 import io.hb3nce04.career.backend.model.dto.request.CreateUserRequestDto;
 import io.hb3nce04.career.backend.model.entity.User;
 import io.hb3nce04.career.backend.repository.UserRepository;
-import io.hb3nce04.career.backend.service.common.BaseService;
+import io.hb3nce04.career.backend.service.common.AbstractBaseService;
 
 @Service
-public class UserService extends BaseService<UserDto, User, UserMapper, UserRepository> {
+public class UserService extends AbstractBaseService<UserDto, User, UserMapper, UserRepository> {
     private final PasswordEncoder encoder;
 
     public UserService(

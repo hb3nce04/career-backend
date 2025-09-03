@@ -6,11 +6,12 @@ import io.hb3nce04.career.backend.mapper.CareerPathCategoryMapper;
 import io.hb3nce04.career.backend.model.dto.CareerPathCategoryDto;
 import io.hb3nce04.career.backend.model.entity.CareerPathCategory;
 import io.hb3nce04.career.backend.repository.CareerPathCategoryRepository;
-import io.hb3nce04.career.backend.service.common.BaseService;
+import io.hb3nce04.career.backend.service.common.AbstractBaseService;
 
 @Service
 public class CareerPathCategoryService
-        extends BaseService<CareerPathCategoryDto, CareerPathCategory, CareerPathCategoryMapper, CareerPathCategoryRepository> {
+        extends AbstractBaseService<CareerPathCategoryDto, CareerPathCategory, CareerPathCategoryMapper, CareerPathCategoryRepository>
+{
     public CareerPathCategoryService(
             CareerPathCategoryMapper mapper,
             CareerPathCategoryRepository repository) {

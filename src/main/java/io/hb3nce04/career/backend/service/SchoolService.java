@@ -1,19 +1,18 @@
 package io.hb3nce04.career.backend.service;
 
-import java.util.List;
-
 import org.springframework.stereotype.Service;
 
+import io.hb3nce04.career.backend.mapper.SchoolMapper;
+import io.hb3nce04.career.backend.model.dto.SchoolDto;
 import io.hb3nce04.career.backend.model.entity.School;
 import io.hb3nce04.career.backend.repository.SchoolRepository;
-import lombok.RequiredArgsConstructor;
+import io.hb3nce04.career.backend.service.common.AbstractBaseService;
 
 @Service
-@RequiredArgsConstructor
-public class SchoolService {
-    private final SchoolRepository schoolRepository;
-
-    public List<School> findAll() {
-        return schoolRepository.findAll();
+public class SchoolService extends AbstractBaseService<SchoolDto, School, SchoolMapper, SchoolRepository> {
+    public SchoolService(
+            SchoolMapper mapper,
+            SchoolRepository repository) {
+        super(mapper, repository);
     }
 }
