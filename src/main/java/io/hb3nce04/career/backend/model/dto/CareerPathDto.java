@@ -9,7 +9,7 @@ import lombok.Setter;
 public class CareerPathDto extends BaseDto {
     private String description;
 
-    private StudentDto student;
+    //private StudentDto student;
 
     private CareerPathCategoryDto careerPathCategory;
 }

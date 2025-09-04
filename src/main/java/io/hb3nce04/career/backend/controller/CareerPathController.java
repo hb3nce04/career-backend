@@ -11,7 +11,7 @@ import io.hb3nce04.career.backend.repository.CareerPathRepository;
 import io.hb3nce04.career.backend.service.CareerPathService;
 
 @RestController
-@RequestMapping("/fields")
+@RequestMapping("/paths")
 public class CareerPathController extends
         AbstractBaseController<CareerPathService, CareerPathDto, CareerPath, CareerPathMapper, CareerPathRepository>
 {
